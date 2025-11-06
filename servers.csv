@@ -1,0 +1,11 @@
+SERVER_NAME,ABSOLUTE_PATH
+kafka,C:\dev-environment\kafka
+zookeeper,C:\dev-environment\kafka
+redis,C:\dev-environment\redis\redis-3.2.100
+postgres,C:\dev-environment\postgresql-16.1
+mysql,C:\dev-environment\mysql-8.2.0\bin
+prometheus,C:\dev-environment\prometheus\prometheus-2.51.1
+zipkin,C:\dev-environment\zipkin
+grafana,C:\dev-environment\grafana\grafana-v10.4.2\bin
+loki,C:\dev-environment\loki\loki
+promtail,C:\dev-environment\loki\promtail

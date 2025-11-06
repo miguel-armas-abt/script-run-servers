@@ -1,0 +1,37 @@
+name: zookeeper-server
+
+container:
+  image:
+    repository: confluentinc/cp-zookeeper
+    tag: "7.3.2"
+    pullPolicy: IfNotPresent
+  port: 2181
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "500m"
+    limits:
+      memory: "512Mi"
+      cpu: "1"
+
+configMaps:
+  ZOOKEEPER_CLIENT_PORT: "2181"
+  ZOOKEEPER_SERVERS: "zookeeper-server:2888:3888"
+  ZOOKEEPER_SERVER_ID: "1"
+
+service:
+  nodePort: 30181
+
+deployment:
+  replicas: 1
+
+hpa:
+  enabled: false
+
+namespace: restaurant
+helmTemplate: default
+
+docker:
+  hostPort: 2181
+  dependencies: none
+  volumes: none
