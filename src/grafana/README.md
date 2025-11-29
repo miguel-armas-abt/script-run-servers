@@ -1,0 +1,7 @@
+```shell
+podman run -d \
+  -p 3000:3000 \
+  --name grafana \
+  -v grafana-storage:/var/lib/grafana \
+  docker.io/grafana/grafana:12.0
+```
